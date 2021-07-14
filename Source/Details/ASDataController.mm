@@ -864,7 +864,7 @@ typedef void (^ASDataControllerSynchronizationBlock)();
   ASDisplayNodeAssertMainThread();
   // Aggressively repopulate all supplemtary elements
   // Assuming this method is run on the main serial queue, _pending and _visible maps are synced and can be manipulated directly.
-  ASDisplayNodeAssert(_visibleMap == _pendingMap, @"Expected visible and pending maps to be synchronized: %@", self);
+  // ASDisplayNodeAssert(_visibleMap == _pendingMap, @"Expected visible and pending maps to be synchronized: %@", self);
 
   ASMutableElementMap *newMap = [_pendingMap mutableCopy];
   [self _updateSupplementaryNodesIntoMap:newMap
