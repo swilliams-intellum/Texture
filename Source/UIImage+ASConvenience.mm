@@ -42,6 +42,9 @@ UIImage *cachedImageNamed(NSString *imageName, UITraitCollection *traitCollectio
     image = [imageCache objectForKey:imageKey];
     if (!image) {
       image =  [UIImage imageNamed:imageName inBundle:nil compatibleWithTraitCollection:traitCollection];
+      if (image == nil) {
+        image =  [UIImage systemImageNamed:imageName compatibleWithTraitCollection:traitCollection];
+      }
       if (image) {
         [imageCache setObject:image forKey:imageKey];
       }
