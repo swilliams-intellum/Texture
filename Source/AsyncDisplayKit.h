@@ -65,7 +65,7 @@
 
 #import <AsyncDisplayKit/ASNodeController+Beta.h>
 #import <AsyncDisplayKit/ASDKViewController.h>
-#import <AsyncDisplayKit/ASNavigationController.h>
+#import <AsyncDisplayKit/TextureNavigationController.h>
 #import <AsyncDisplayKit/ASTabBarController.h>
 #import <AsyncDisplayKit/ASRangeControllerUpdateRangeProtocol+Beta.h>
 

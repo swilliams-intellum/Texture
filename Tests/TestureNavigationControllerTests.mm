@@ -1,5 +1,5 @@
 //
-//  ASNavigationControllerTests.mm
+//  TestureNavigationControllerTests.mm
 //  Texture
 //
 //  Copyright (c) Pinterest, Inc.  All rights reserved.
@@ -10,16 +10,16 @@
 
 #import <AsyncDisplayKit/AsyncDisplayKit.h>
 
-@interface ASNavigationControllerTests : XCTestCase
+@interface TestureNavigationControllerTests : XCTestCase
 @end
 
-@implementation ASNavigationControllerTests
+@implementation TestureNavigationControllerTests
 
 - (void)testSetViewControllers {
   ASDKViewController *firstController = [ASDKViewController new];
   ASDKViewController *secondController = [ASDKViewController new];
   NSArray *expectedViewControllerStack = @[firstController, secondController];
-  ASNavigationController *navigationController = [ASNavigationController new];
+  TextureNavigationController *navigationController = [TextureNavigationController new];
   [navigationController setViewControllers:@[firstController, secondController]];
   XCTAssertEqual(navigationController.topViewController, secondController);
   XCTAssertEqual(navigationController.visibleViewController, secondController);
@@ -30,7 +30,7 @@
   ASDKViewController *firstController = [ASDKViewController new];
   ASDKViewController *secondController = [ASDKViewController new];
   NSArray *expectedViewControllerStack = @[firstController];
-  ASNavigationController *navigationController = [ASNavigationController new];
+  TextureNavigationController *navigationController = [TextureNavigationController new];
   [navigationController setViewControllers:@[firstController, secondController]];
   [navigationController popViewControllerAnimated:false];
   XCTAssertEqual(navigationController.topViewController, firstController);
@@ -42,7 +42,7 @@
   ASDKViewController *firstController = [ASDKViewController new];
   ASDKViewController *secondController = [ASDKViewController new];
   NSArray *expectedViewControllerStack = @[firstController, secondController];
-  ASNavigationController *navigationController = [[ASNavigationController new] initWithRootViewController:firstController];
+  TextureNavigationController *navigationController = [[TextureNavigationController new] initWithRootViewController:firstController];
   [navigationController pushViewController:secondController animated:false];
   XCTAssertEqual(navigationController.topViewController, secondController);
   XCTAssertEqual(navigationController.visibleViewController, secondController);
