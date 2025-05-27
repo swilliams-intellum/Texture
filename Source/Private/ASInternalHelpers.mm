@@ -70,9 +70,9 @@ void ASInitializeFrameworkMainThread(void)
     if (ASActivateExperimentalFeature(ASExperimentalLayerDefaults)) {
       // Nop. We will gather default values on-demand in ASDefaultAllowsGroupOpacity and ASDefaultAllowsEdgeAntialiasing
     } else {
-      CALayer *layer = [[[UIView alloc] init] layer];
-      allowsGroupOpacityFromUIKitOrNil = @(layer.allowsGroupOpacity);
-      allowsEdgeAntialiasingFromUIKitOrNil = @(layer.allowsEdgeAntialiasing);
+      // CALayer *layer = [[[UIView alloc] init] layer];
+      allowsGroupOpacityFromUIKitOrNil = nil; //@(layer.allowsGroupOpacity);
+      allowsEdgeAntialiasingFromUIKitOrNil = nil; //@(layer.allowsEdgeAntialiasing);
     }
     ASNotifyInitialized();
 #if AS_SIGNPOST_ENABLE
