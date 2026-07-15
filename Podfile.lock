@@ -1,0 +1,43 @@
+PODS:
+  - iOSSnapshotTestCase/Core (8.0.0)
+  - OCMock (3.9.4)
+  - PINCache (3.0.4):
+    - PINCache/Arc-exception-safe (= 3.0.4)
+    - PINCache/Core (= 3.0.4)
+  - PINCache/Arc-exception-safe (3.0.4):
+    - PINCache/Core
+  - PINCache/Core (3.0.4):
+    - PINOperation (~> 1.2.3)
+  - PINOperation (1.2.3)
+  - PINRemoteImage (3.0.4):
+    - PINRemoteImage/PINCache (= 3.0.4)
+  - PINRemoteImage/Core (3.0.4):
+    - PINOperation
+  - PINRemoteImage/PINCache (3.0.4):
+    - PINCache (~> 3.0.4)
+    - PINRemoteImage/Core
+
+DEPENDENCIES:
+  - iOSSnapshotTestCase/Core (~> 8.0)
+  - OCMock (~> 3.9)
+  - PINRemoteImage (~> 3.0.0)
+  - PINRemoteImage/PINCache
+
+SPEC REPOS:
+  trunk:
+    - iOSSnapshotTestCase
+    - OCMock
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
+
+SPEC CHECKSUMS:
+  iOSSnapshotTestCase: a670511f9ee3829c2b9c23e6e68f315fd7b6790f
+  OCMock: 589f2c84dacb1f5aaf6e4cec1f292551fe748e74
+  PINCache: d9a87a0ff397acffe9e2f0db972ac14680441158
+  PINOperation: fb563bcc9c32c26d6c78aaff967d405aa2ee74a7
+  PINRemoteImage: 6256a644f4996991f124811763c7286b2a63ff94
+
+PODFILE CHECKSUM: bc2a3c74e8911331315b5ed0c77f86821080ee8d
+
+COCOAPODS: 1.16.2

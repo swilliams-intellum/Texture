@@ -16,8 +16,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "AsyncDisplayKit",
-            url: "https://github.com/swilliams-intellum/Texture/releases/download/3.2.1/AsyncDisplayKit.xcframework.zip",
-            checksum: "b80fd16b371558d746e04f59b5c5e87abc9189147c4d3fcf6b133953e6b7db94"
+            url: "https://github.com/swilliams-intellum/Texture/releases/download/3.2.2/AsyncDisplayKit.xcframework.zip",
+            checksum: "e379a6ea39763f63bd8e8c93f28c04dd1aa3a52a9c676cc0e2ea6dcf336d32b2"
         )
     ]
 )

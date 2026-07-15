@@ -19,7 +19,10 @@ xcodebuild archive \
   -destination "generic/platform=iOS" \
   -archivePath "$ARCHIVES_DIR/$FRAMEWORK_NAME-iOS" \
   SKIP_INSTALL=NO \
-  BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+  BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+  CODE_SIGNING_ALLOWED=NO \
+  OTHER_CFLAGS='$(inherited) -Wno-error=parentheses' \
+  OTHER_LDFLAGS='$(inherited) -ObjC'
 
 echo "=== Archiving for iOS Simulator ==="
 xcodebuild archive \
@@ -29,7 +32,10 @@ xcodebuild archive \
   -destination "generic/platform=iOS Simulator" \
   -archivePath "$ARCHIVES_DIR/$FRAMEWORK_NAME-iOS-Simulator" \
   SKIP_INSTALL=NO \
-  BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+  BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+  CODE_SIGNING_ALLOWED=NO \
+  OTHER_CFLAGS='$(inherited) -Wno-error=parentheses' \
+  OTHER_LDFLAGS='$(inherited) -ObjC'
 
 echo "=== Archiving for macOS Catalyst ==="
 xcodebuild archive \
@@ -39,7 +45,10 @@ xcodebuild archive \
   -destination "generic/platform=macOS,variant=Mac Catalyst" \
   -archivePath "$ARCHIVES_DIR/$FRAMEWORK_NAME-Catalyst" \
   SKIP_INSTALL=NO \
-  BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+  BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+  CODE_SIGNING_ALLOWED=NO \
+  OTHER_CFLAGS='$(inherited) -Wno-error=parentheses' \
+  OTHER_LDFLAGS='$(inherited) -ObjC'
 
 echo "=== Creating XCFramework ==="
 xcodebuild -create-xcframework \
